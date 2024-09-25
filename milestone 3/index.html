@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Interactive Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Enter Your Details to Generate Resume</h2>
+        <form id="resumeForm">
+
+            <!-- Personal Information Section -->
+            <label for="personalInfoContent">Personal Information:</label>
+            <textarea id="personalInfoContent" required></textarea>
+            
+            <!-- Education Section -->
+            <label for="education">Education:</label>
+            <textarea id="education" required></textarea>
+
+            <!-- Skills Section -->
+            <label for="skills">Skills:</label>
+            <textarea id="skills" required></textarea>
+            
+            <!-- Work Experience Section -->
+            <label for="experience">Work Experience:</label>
+            <textarea id="experience" required></textarea>
+            
+            <!-- Objective Section -->
+            <label for="objective">Objective:</label>
+            <textarea id="objective" required></textarea>
+
+            <!-- Profile Picture -->
+            <label for="profilePic">Upload Profile Picture:</label>
+            <input type="file" id="profilePic" accept="image/*" required>
+            
+            <button type="submit">Generate Resume</button>
+        </form>
+    </div>
+
+    <div class="container" id="resumeContainer" style="display:none;">
+        <!-- Profile Picture and Career Objective -->
+        <div class="left-section">
+            <div class="profile">
+                <img src="" alt="Profile Picture" class="profile-pic" id="generatedProfilePic">
+            </div>
+            <div class="profile">
+                <h2>PROFILE</h2>
+                <p id="generatedObjective"></p>
+            </div>
+        </div>
+
+        <!-- Dynamic Interactive Resume Header -->
+        <div class="right-section">
+            <h1 class="title">DYNAMIC INTERACTIVE RESUME</h1>
+
+            <!-- Personal Information Section -->
+            <div class="section-box">
+                <div class="heading">
+                    <h2>PERSONAL INFORMATION</h2>
+                </div>
+                <div class="content">
+                    <p id="generatedPersonalInfo"></p>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="section-box">
+                <div class="heading">
+                    <h2>EDUCATION</h2>
+                </div>
+                <div class="content">
+                    <p id="generatedEducation"></p>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="section-box">
+                <div class="heading">
+                    <h2>SKILLS</h2>
+                </div>
+                <div class="content">
+                    <ul id="generatedSkills"></ul>
+                </div>
+            </div>
+
+            <!-- Work Experience Section -->
+            <div class="section-box">
+                <div class="heading">
+                    <h2>WORK EXPERIENCE</h2>
+                </div>
+                <div class="content">
+                    <p id="generatedExperience"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
