@@ -1,15 +1,14 @@
-"use strict";
-// Get buttons for toggling each section
-const personalInfoBtn = document.getElementById('btn-personal-info');
-const educationBtn = document.getElementById('btn-education');
-const skillsBtn = document.getElementById('btn-skills');
-const experienceBtn = document.getElementById('btn-experience');
-// Get the content sections
-const personalInfoSection = document.getElementById('personal-info');
-const educationSection = document.getElementById('education');
-const skillsSection = document.getElementById('skills');
-const experienceSection = document.getElementById('experience');
-// Function to toggle the visibility of a section
+// Button to toggle the skills section
+var personalInfoBtn = document.getElementById('btn-personal-info');
+var educationBtn = document.getElementById('btn-education');
+var skillsBtn = document.getElementById('btn-skills');
+var experienceBtn = document.getElementById('btn-experience');
+// Skills section element
+var personalInfoSection = document.getElementById('personal-info');
+var educationSection = document.getElementById('education');
+var skillsSection = document.getElementById('skills');
+var experienceSection = document.getElementById('experience');
+// Toogles the visibility of the skills section
 function toggleSection(section, button) {
     if (section.classList.contains('hidden')) {
         section.classList.remove('hidden');
@@ -20,8 +19,8 @@ function toggleSection(section, button) {
         button.textContent = 'Show';
     }
 }
-// Add event listeners to buttons to toggle sections
-personalInfoBtn.addEventListener('click', () => toggleSection(personalInfoSection, personalInfoBtn));
-educationBtn.addEventListener('click', () => toggleSection(educationSection, educationBtn));
-skillsBtn.addEventListener('click', () => toggleSection(skillsSection, skillsBtn));
-experienceBtn.addEventListener('click', () => toggleSection(experienceSection, experienceBtn));
+// Event listener for the button
+personalInfoBtn.addEventListener('click', function () { return toggleSection(personalInfoSection, personalInfoBtn); });
+educationBtn.addEventListener('click', function () { return toggleSection(educationSection, educationBtn); });
+skillsBtn.addEventListener('click', function () { return toggleSection(skillsSection, skillsBtn); });
+experienceBtn.addEventListener('click', function () { return toggleSection(experienceSection, experienceBtn); });
